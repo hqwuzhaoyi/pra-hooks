@@ -1,7 +1,12 @@
 {
-  "private": true,
+  "private": false,
   "name": "pra-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqwuzhaoyi/pra-hook"
+  },
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hook",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -19,6 +24,13 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
