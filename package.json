@@ -8,6 +8,7 @@
   },
   "homepage": "https://github.com/hqwuzhaoyi/pra-hook",
   "scripts": {
+    "init": "rm -rf node_modules && yarn install && yarn run build",
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
