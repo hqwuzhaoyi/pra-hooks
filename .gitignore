@@ -23,3 +23,7 @@
 # ide
 /.vscode
 /.idea
+package.json
+
+# test
+/coverage

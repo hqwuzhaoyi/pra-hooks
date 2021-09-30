@@ -1,7 +1,7 @@
 import { MutableRefObject } from 'react';
 import { useOffsetOptionProps } from './index';
-import type { BasicTarget } from '@/utils/dom';
-import { getTargetElement } from '@/utils/dom';
+import type { BasicTarget } from '../../utils/dom';
+import { getTargetElement } from '../../utils/dom';
 
 export default function useTranslate(
   ref: BasicTarget,

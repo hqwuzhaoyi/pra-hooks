@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useLayoutEffect, useRef } from 'react';
 import { useSize, useWhyDidYouUpdate } from 'ahooks';
 import { useOffsetOptionProps } from './index';
-import { BasicTarget, getTargetElement } from '@/utils/dom';
+import { BasicTarget, getTargetElement } from '../../utils/dom';
 import useRafState from './useRafState';
 type DirectionType = 'forward' | 'backward';
 
@@ -25,7 +25,7 @@ export default function useChildrenWidth(
     () => {
       const el = getTargetElement(target);
       const iterableChildren = ((el || {}) as HTMLElement).children || [];
-      return [...iterableChildren].map(
+      return Array.from(iterableChildren).map(
         (child) => (child as HTMLElement)[offset],
       );
     },
@@ -42,7 +42,7 @@ export default function useChildrenWidth(
       const el = getTargetElement(target);
       const iterableChildren = ((el || {}) as HTMLElement).children || [];
       setChildrenWidthArray(
-        [...iterableChildren].map((item) => (item as HTMLElement)[offset]),
+       Array.from(iterableChildren).map((item) => (item as HTMLElement)[offset]),
       );
       firstRef.current = true
     }
@@ -53,7 +53,7 @@ export default function useChildrenWidth(
         const iterableChildren =
           ((mutations[0]?.target || {}) as HTMLElement).children || [];
         setChildrenWidthArray(
-          [...iterableChildren].map((item) => (item as HTMLElement)[offset]),
+         Array.from(iterableChildren).map((item) => (item as HTMLElement)[offset]),
         );
       }
     });
