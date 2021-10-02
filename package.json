@@ -1,27 +1,27 @@
 {
-  "private": false,
+  "private": true,
   "name": "pra-hook",
-  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hqwuzhaoyi/pra-hook"
   },
   "homepage": "https://github.com/hqwuzhaoyi/pra-hook",
   "scripts": {
-    "init": "rm -rf node_modules && yarn install && yarn run build",
+    "init": "rm -rf node_modules && yarn install && yarn run clean && yarn run bootstrap && yarn run build",
     "start": "dumi dev",
+    "bootstrap": "lerna bootstrap",
     "docs:build": "dumi build",
+    "clean": "lerna clean --yes",
+    "build": "lerna run build",
     "docs:deploy": "gh-pages -d docs-dist",
-    "build": "father-build",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "pub": "lerna publish"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -44,6 +44,11 @@
     "ahooks": "^2.10.11"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.12.0",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
     "@testing-library/react": "^12.1.1",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.0.2",
@@ -52,6 +57,7 @@
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
     "jest": "^27.2.4",
+    "lerna": "^4.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "raf-stub": "^3.0.0",
@@ -59,9 +65,13 @@
     "react-dom": "^16.12.0 || ^17.0.0",
     "react-test-renderer": "^16.12.0 || ^17.0.0",
     "ts-jest": "^27.0.5",
-    "yorkie": "^2.0.0"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0 || ^17.0.0"
+    "yorkie": "^2.0.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
   }
 }
