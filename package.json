@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "name": "pra-hook",
   "repository": {
     "type": "git",
