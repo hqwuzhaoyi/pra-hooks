@@ -1,6 +1,6 @@
 {
   "name": "pra-hook",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "hqwuzhaoyi <hqwuzhaoyi@gmail.com>",
   "homepage": "https://github.com/hqwuzhaoyi/pra-hook/tree/main/packages/pra-hook#readme",
@@ -31,6 +31,6 @@
   },
   "gitHead": "4e889c1471fc1a999cbcb9bc9889d267aa16e118",
   "dependencies": {
-    "@pra-hook/use-backforth": "^0.0.1"
+    "@pra-hook/use-backforth": "^0.0.2"
   }
 }
