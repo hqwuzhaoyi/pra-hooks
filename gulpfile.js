@@ -48,7 +48,7 @@ gulp.task('declaration', function () {
 });
 
 gulp.task('copyReadme', async function () {
-  await gulp.src('../../README.md').pipe(gulp.dest('../../packages/hooks'));
+  await gulp.src('../../README.md').pipe(gulp.dest('../../packages/pra-hook'));
 });
 
 exports.default = gulp.series('clean', 'cjs', 'es', 'declaration', 'copyReadme');

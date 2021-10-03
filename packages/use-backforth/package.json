@@ -40,5 +40,6 @@
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
-  }
+  },
+  "gitHead": "4e889c1471fc1a999cbcb9bc9889d267aa16e118"
 }

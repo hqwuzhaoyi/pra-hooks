@@ -1,11 +1,14 @@
 {
-  "name": "use-translate",
+  "name": "pra-hook",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "hqwuzhaoyi <hqwuzhaoyi@gmail.com>",
-  "homepage": "https://github.com/hqwuzhaoyi/pra-hook/tree/main/packages/use-translate#readme",
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hook/tree/main/packages/pra-hook#readme",
   "license": "MIT",
-  "main": "lib/use-translate.js",
+  "main": "./lib/index.js",
+  "module": "./es/index.esm.js",
+  "types": "./lib/index.d.ts",
+  "unpkg": "dist/pra-hook.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,12 +21,16 @@
     "url": "git+https://github.com/hqwuzhaoyi/pra-hook.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "gulp && webpack-cli"
   },
   "bugs": {
     "url": "https://github.com/hqwuzhaoyi/pra-hook/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
+  },
+  "gitHead": "4e889c1471fc1a999cbcb9bc9889d267aa16e118",
+  "dependencies": {
+    "@pra-hook/use-backforth": "^0.0.1"
   }
 }
