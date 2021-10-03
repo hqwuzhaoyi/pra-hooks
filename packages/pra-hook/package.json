@@ -25,9 +25,6 @@
   "bugs": {
     "url": "https://github.com/hqwuzhaoyi/pra-hook/issues"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com/"
-  },
   "dependencies": {
     "@pra-hook/use-backforth": "^0.0.2"
   },
@@ -35,5 +32,5 @@
     "node": ">=8.0.0"
   },
   "license": "MIT",
-  "gitHead": "26b9f48e2b64ce03ea65f3c94cb2f03e31cab1bc"
+  "gitHead": "9cc42eee6ca201011820289e596fefb3335d5fd8"
 }
