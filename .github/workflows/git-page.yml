@@ -32,7 +32,8 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "hqwuzhaoyi@gmail.com"
           git config --global user.name "hqwuzhaoyi"
+          echo "$ACTION_DEPLOY_KEY"
       - name: Deploy
         run: |
-          npm run init
+          yarn install
           npm run deploy
