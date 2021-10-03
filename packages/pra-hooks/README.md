@@ -1,5 +1,7 @@
 # pra-hooks
 
+![node-ci workflow](https://github.com/hqwuzhaoyi/pra-hooks/actions/workflows/node-ci.yml/badge.svg)
+
 ## Getting Started
 
 Install dependencies,
