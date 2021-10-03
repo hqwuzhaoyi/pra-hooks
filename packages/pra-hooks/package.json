@@ -3,11 +3,11 @@
   "version": "1.0.3",
   "description": "> TODO: description",
   "author": "hqwuzhaoyi <hqwuzhaoyi@gmail.com>",
-  "homepage": "https://github.com/hqwuzhaoyi/pra-hook/tree/main/packages/pra-hook#readme",
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hooks/tree/main/packages/pra-hooks#readme",
   "main": "./lib/index.js",
   "module": "./es/index.esm.js",
   "types": "./lib/index.d.ts",
-  "unpkg": "dist/pra-hook.js",
+  "unpkg": "dist/pra-hooks.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -17,16 +17,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hqwuzhaoyi/pra-hook.git"
+    "url": "git+https://github.com/hqwuzhaoyi/pra-hooks.git"
   },
   "scripts": {
     "build": "gulp && webpack-cli"
   },
   "bugs": {
-    "url": "https://github.com/hqwuzhaoyi/pra-hook/issues"
+    "url": "https://github.com/hqwuzhaoyi/pra-hooks/issues"
   },
   "dependencies": {
-    "@pra-hook/use-backforth": "^0.0.2"
+    "@hqwuzhaoyi/use-backforth": "^1.0.1"
   },
   "engines": {
     "node": ">=8.0.0"

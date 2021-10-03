@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = merge(common, {
   entry: './es/index.js',
   output: {
-    filename: 'pra-hook.js',
+    filename: 'pra-hooks.js',
     library: 'praHook',
     path: path.resolve(__dirname, './dist'),
   },

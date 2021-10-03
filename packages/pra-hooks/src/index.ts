@@ -1,3 +1,3 @@
-import useOffset from '@pra-hook/use-backforth';
+import useOffset from '@hqwuzhaoyi/use-backforth';
 
 export { useOffset }

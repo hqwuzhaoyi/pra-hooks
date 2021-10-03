@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useOffset } from 'pra-hook';
+import { useOffset } from 'pra-hooks';
 
 const Offset = () => {
   const ref = useRef<HTMLDivElement>(null);

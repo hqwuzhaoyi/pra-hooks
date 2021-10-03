@@ -5,9 +5,9 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hqwuzhaoyi/pra-hook"
+    "url": "git+https://github.com/hqwuzhaoyi/pra-hooks"
   },
-  "homepage": "https://github.com/hqwuzhaoyi/pra-hook",
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hooks",
   "main": "./lib/index.js",
   "module": "./es/index.esm.js",
   "types": "./lib/index.d.ts",

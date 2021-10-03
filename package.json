@@ -1,11 +1,11 @@
 {
   "private": false,
-  "name": "pra-hook",
+  "name": "pra-hooks",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hqwuzhaoyi/pra-hook"
+    "url": "git+https://github.com/hqwuzhaoyi/pra-hooks"
   },
-  "homepage": "https://github.com/hqwuzhaoyi/pra-hook",
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hooks",
   "scripts": {
     "init": "rm -rf node_modules && yarn install && yarn run clean && yarn run bootstrap && yarn run build",
     "start": "dumi dev",

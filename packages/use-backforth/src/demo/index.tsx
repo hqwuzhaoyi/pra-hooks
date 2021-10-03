@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useOffset } from 'pra-hook';
+import { useOffset } from 'pra-hooks';
 
 const dataSource: Record<string, any>[] = [
   { minWidth: 100, height: 100, backgroundColor: 'yellow' },

@@ -1,27 +1,27 @@
-# pra-hook
+# pra-hooks
 
 ## Getting Started
 
 Install dependencies,
 
 ```bash
-$ npm i
+npm i
 ```
 
 Start the dev server,
 
 ```bash
-$ npm start
+npm start
 ```
 
 Build documentation,
 
 ```bash
-$ npm run docs:build
+npm run docs:build
 ```
 
 Build library via `father-build`,
 
 ```bash
-$ npm run build
+npm run build
 ```
