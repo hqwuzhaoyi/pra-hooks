@@ -34,5 +34,5 @@ jobs:
           git config --global user.name "hqwuzhaoyi"
       - name: Deploy
         run: |
-          yarn init
-          yarn deploy
+          npm run init
+          npm run deploy
