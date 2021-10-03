@@ -1,8 +1,8 @@
 {
-  "private": false,
-  "name": "@pra-hook/use-backforth",
-  "version": "0.0.2",
+  "name": "@hqwuzhaoyi/use-backforth",
+  "version": "1.0.0",
   "description": "react hooks library",
+  "author": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hqwuzhaoyi/pra-hook"
@@ -37,9 +37,5 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com/"
-  },
-  "gitHead": "4e889c1471fc1a999cbcb9bc9889d267aa16e118"
+  "license": "MIT"
 }
