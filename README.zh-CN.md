@@ -1,4 +1,4 @@
-English | [简体中文](https://github.com/alibaba/hooks/blob/master/README.zh-CN.md)
+[English](https://github.com/hqwuzhaoyi/pra-hooks/blob/master/README.md) | 简体中文
 
 # pra-hooks
 
@@ -7,22 +7,22 @@ English | [简体中文](https://github.com/alibaba/hooks/blob/master/README.zh-
 [![NPM version][version-image]][version-url]
 [![NPM downloads][download-image]][download-url]
 
-## 📚 Documentation
+## 📚 文档
 
 - [中文](https://www.wuzhaoyi.xyz/pra-hooks/)
 
-## ✨ Features
+## ✨ 特性
 
-- Written in TypeScript with predictable static types.
-- Advanced components encapsulated by basic hooks
+- 使用 TypeScript 构建，提供完整的类型定义文件。
+- 基础 hook 封装出的高级组件
 
-## 📦 Install
+## 📦 安装
 
 ```
 npm i pra-hooks --save
 ```
 
-## 🔨 Usage
+## 🔨 使用
 
 ```typescript
 import { useBackforth } from 'pra-hooks';
