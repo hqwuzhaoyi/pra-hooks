@@ -1,3 +1,3 @@
-import useOffset from '@hqwuzhaoyi/use-backforth';
+import useBackforth from '@hqwuzhaoyi/use-backforth';
 
-export { useOffset }
+export { useBackforth };
