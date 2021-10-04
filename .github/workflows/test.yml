@@ -1,4 +1,4 @@
-name: Node CI
+name: ✅ test
 
 on: [push, pull_request]
 
@@ -22,3 +22,15 @@ jobs:
           yarn run test
         env:
           CI: true
+
+
+  coverage:
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: npm test -- --coverage
+
+      - name: coverage
+        run: bash <(curl -s https://codecov.io/bash)
+    needs: build
