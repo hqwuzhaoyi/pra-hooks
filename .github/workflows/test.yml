@@ -42,7 +42,11 @@ jobs:
           path: node_modules
           key: node_modules-${{ hashFiles('**/package-temp-dir/package-lock.json') }}
 
-      - name: test
+      - name: yarn intall, build, and test
+        run: |
+          yarn run init
+
+      - name: test generate coverage
         run: npm test -- --coverage
 
       - name: coverage
