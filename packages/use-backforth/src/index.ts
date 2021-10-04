@@ -1,23 +1,24 @@
 import React, { useMemo, useState, useCallback } from 'react';
-import {
-  useSize,
-  useHover,
-} from 'ahooks';
+import { useSize, useHover } from 'ahooks';
 import useTranslate from './useTranslate';
 import useChildrenWidth from './useChildrenWidth';
 import { BasicTarget, getTargetElement } from './utils/dom';
 
-
-export interface useOffsetOptionProps {
+export interface useBackforthOptionProps {
   canSwitch?: boolean;
   snapFrame?: boolean;
   wheelEvent?: boolean;
   direction?: 'row' | 'column';
 }
 
-function useOffset(
+function useBackforth(
   target: BasicTarget,
-  { canSwitch = true, snapFrame = true, wheelEvent = false, direction = 'row' }: useOffsetOptionProps = {},
+  {
+    canSwitch = true,
+    snapFrame = true,
+    wheelEvent = false,
+    direction = 'row',
+  }: useBackforthOptionProps = {},
 ) {
   const [translateX, setTranslateX] = useState(0);
   // const debouncedTranslateX = useDebounce(translateX, { wait: 80 });
@@ -29,8 +30,6 @@ function useOffset(
     snapFrame,
     direction,
   });
-
-
 
   const viewPortSpan = useMemo(() => {
     if (direction === 'row') {
@@ -91,4 +90,4 @@ function useOffset(
   };
 }
 
-export default useOffset;
+export default useBackforth;

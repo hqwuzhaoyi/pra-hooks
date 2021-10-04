@@ -1,16 +1,14 @@
 import React, { useRef } from 'react';
-import { useOffset } from 'pra-hooks';
+import { useBackforth } from 'pra-hooks';
 
 const Offset = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const { handleForward, canForward, handleBackward, canBackward } = useOffset(
-    ref,
-    {
+  const { handleForward, canForward, handleBackward, canBackward } =
+    useBackforth(ref, {
       snapFrame: true,
       canSwitch: true,
       direction: 'column',
-    },
-  );
+    });
 
   const noWrapStyle = {
     height: 150,

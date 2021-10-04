@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useOffset } from 'pra-hooks';
+import { useBackforth } from 'pra-hooks';
 
 const dataSource: Record<string, any>[] = [
   { minWidth: 100, height: 100, backgroundColor: 'yellow' },
@@ -13,7 +13,7 @@ const Offset = () => {
   const [state, setState] = useState<Record<string, any>[]>([]);
   const ref = useRef<HTMLDivElement>(null);
   const { handleForward, canForward, canBackward, handleBackward, isHovering } =
-    useOffset(ref, {
+    useBackforth(ref, {
       snapFrame: false,
       wheelEvent: true,
       direction: 'row',

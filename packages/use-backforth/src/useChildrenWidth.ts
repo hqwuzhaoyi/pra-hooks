@@ -1,15 +1,15 @@
 import { useCallback, useMemo, useLayoutEffect, useRef } from 'react';
 import { useSize, useWhyDidYouUpdate } from 'ahooks';
-import { useOffsetOptionProps } from './index';
+import { useBackforthOptionProps } from './index';
 import { BasicTarget, getTargetElement } from './utils/dom';
 import useRafState from './useRafState';
 type DirectionType = 'forward' | 'backward';
 
 export default function useChildrenWidth(
   target: BasicTarget,
-  options: Pick<useOffsetOptionProps, 'direction' | 'snapFrame'> = {},
+  options: Pick<useBackforthOptionProps, 'direction' | 'snapFrame'> = {},
 ) {
-  const firstRef = useRef(false)
+  const firstRef = useRef(false);
 
   const { snapFrame = true, direction = 'row' } = options;
 
@@ -35,16 +35,18 @@ export default function useChildrenWidth(
   useLayoutEffect(() => {
     const el = getTargetElement(target);
     if (!el) {
-      return () => { };
+      return () => {};
     }
 
     if (firstRef.current == false) {
       const el = getTargetElement(target);
       const iterableChildren = ((el || {}) as HTMLElement).children || [];
       setChildrenWidthArray(
-       Array.from(iterableChildren).map((item) => (item as HTMLElement)[offset]),
+        Array.from(iterableChildren).map(
+          (item) => (item as HTMLElement)[offset],
+        ),
       );
-      firstRef.current = true
+      firstRef.current = true;
     }
 
     // * 观察子节点变动
@@ -53,7 +55,9 @@ export default function useChildrenWidth(
         const iterableChildren =
           ((mutations[0]?.target || {}) as HTMLElement).children || [];
         setChildrenWidthArray(
-         Array.from(iterableChildren).map((item) => (item as HTMLElement)[offset]),
+          Array.from(iterableChildren).map(
+            (item) => (item as HTMLElement)[offset],
+          ),
         );
       }
     });
@@ -96,10 +100,7 @@ export default function useChildrenWidth(
               (xCoordinate < accWidth ||
                 index === childrenWidthArray.length - 1)
             ) {
-              result =
-                direction === 'forward'
-                  ? accWidth
-                  : accWidth - width;
+              result = direction === 'forward' ? accWidth : accWidth - width;
             }
           });
 
@@ -107,10 +108,9 @@ export default function useChildrenWidth(
         }
       }
       if (xCoordinate > childrenWidth) {
-        return childrenWidth
+        return childrenWidth;
       }
       return xCoordinate;
-
     },
     [childrenWidthArray, snapFrame, childrenWidth],
   );

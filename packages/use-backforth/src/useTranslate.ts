@@ -1,11 +1,11 @@
 import { MutableRefObject } from 'react';
-import { useOffsetOptionProps } from './index';
+import { useBackforthOptionProps } from './index';
 import type { BasicTarget } from './utils/dom';
 import { getTargetElement } from './utils/dom';
 
 export default function useTranslate(
   ref: BasicTarget,
-  { direction }: Pick<useOffsetOptionProps, 'direction'>,
+  { direction }: Pick<useBackforthOptionProps, 'direction'>,
 ) {
   const run = (xCoordinate: number) => {
     const el = getTargetElement(ref);

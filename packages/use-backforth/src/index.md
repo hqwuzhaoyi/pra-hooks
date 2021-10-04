@@ -1,9 +1,9 @@
 ---
-title: useOffset
+title: useBackforth
 nav:
   title: hook
 group:
-  title: useOffset
+  title: useBackforth
 ---
 
 自动计算组件宽度，使其可以偏移
