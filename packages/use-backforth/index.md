@@ -1,7 +1,8 @@
 ---
 title: useBackforth
 nav:
-  title: hook
+  path: /Hooks
+  title: Hooks
 group:
   title: useBackforth
 ---
@@ -12,7 +13,7 @@ group:
 
 ## 横向滚动
 
-<code src="./demo/index.tsx"></code>
+<code src="./src/demo/index.tsx"></code>
 
 ## 竖向滚动
 
