@@ -1,4 +1,4 @@
-English | [简体中文](https://github.com/alibaba/hooks/blob/master/README.zh-CN.md)
+English | [简体中文](https://github.com/hqwuzhaoyi/pra-hooks/blob/master/README.zh-CN.md)
 
 # pra-hooks
 
