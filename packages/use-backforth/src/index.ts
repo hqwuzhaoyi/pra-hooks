@@ -25,10 +25,11 @@ function useBackforth(
 
   const size = useSize(target);
   const { run: MoveXRef } = useTranslate(target, { direction });
-  const { childrenWidth, chooseChildRange } = useChildrenWidth(target, {
-    snapFrame,
-    direction,
-  });
+  const { childrenWidth, chooseChildRange, childrenWidthUtilIndex } =
+    useChildrenWidth(target, {
+      snapFrame,
+      direction,
+    });
 
   const viewPortSpan = useMemo(() => {
     if (direction === 'row') {
@@ -80,11 +81,21 @@ function useBackforth(
     return false;
   }, [translateX, viewPortSpan]);
 
+  const redirect = useCallback(
+    (targetIndex) => {
+      const toX = childrenWidthUtilIndex(targetIndex - 1);
+      setTranslateX(chooseChildRange(toX, 'backward'));
+      MoveXRef(chooseChildRange(toX, 'backward'));
+    },
+    [childrenWidthUtilIndex, chooseChildRange],
+  );
+
   return {
     handleForward,
     handleBackward,
     canForward,
     canBackward,
+    redirect,
   };
 }
 

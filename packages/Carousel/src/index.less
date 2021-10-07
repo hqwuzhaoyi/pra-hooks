@@ -1,0 +1,21 @@
+.carouselContainer {
+  position: relative;
+  overflow: hidden;
+  .carouselBody {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.3s;
+  }
+  .carouselButton {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+}

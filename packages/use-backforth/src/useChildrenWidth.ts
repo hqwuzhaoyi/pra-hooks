@@ -31,6 +31,18 @@ export default function useChildrenWidth(
     },
   );
 
+  // * 根据下表返回对应的子元素长度
+  const childrenWidthUtilIndex = useCallback(
+    (targetIndex) => {
+      return childrenWidthArray
+        .filter((_, index) => index <= targetIndex)
+        .reduce((acc, childWidth) => {
+          return acc + childWidth;
+        }, 0);
+    },
+    [childrenWidthArray],
+  );
+
   // * 当子元素变动时
   useLayoutEffect(() => {
     const el = getTargetElement(target);
@@ -115,5 +127,10 @@ export default function useChildrenWidth(
     [childrenWidthArray, snapFrame, childrenWidth],
   );
 
-  return { childrenWidth, childrenWidthArray, chooseChildRange };
+  return {
+    childrenWidth,
+    childrenWidthArray,
+    chooseChildRange,
+    childrenWidthUtilIndex,
+  };
 }

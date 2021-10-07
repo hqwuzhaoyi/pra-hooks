@@ -10,7 +10,12 @@ export default defineConfig({
   publicPath: '/pra-hooks/',
   base: '/pra-hooks/',
   resolve: {
-    includes: ['docs', 'packages/pra-hooks/src', 'packages/use-backforth'],
+    includes: [
+      'docs',
+      'packages/pra-hooks/src',
+      'packages/use-backforth',
+      'packages/Carousel',
+    ],
   },
   // more config: https://d.umijs.org/config
 });

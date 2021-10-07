@@ -1,0 +1,36 @@
+{
+  "name": "@hqwuzhaoyi/carousel",
+  "version": "1.0.0",
+  "description": "react component",
+  "author": "hqwuzhaoyi <hqwuzhaoyi@gmail.com>",
+  "homepage": "https://github.com/hqwuzhaoyi/pra-hooks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqwuzhaoyi/pra-hooks"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "module": "./es/index.esm.js",
+  "types": "./lib/index.d.ts",
+  "unpkg": "dist/carousel.js",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "gulp && webpack-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/hqwuzhaoyi/pra-hooks/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0 || ^17.0.0",
+    "react-dom": "^16.12.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
+  }
+}
