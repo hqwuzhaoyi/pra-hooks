@@ -12,7 +12,7 @@ const moreRecord = [{ minWidth: 300, height: 100, backgroundColor: 'pink' }];
 const Offset = () => {
   const [state, setState] = useState<Record<string, any>[]>([]);
   const ref = useRef<HTMLDivElement>(null);
-  const { handleForward, canForward, canBackward, handleBackward, isHovering } =
+  const { handleForward, canForward, canBackward, handleBackward } =
     useBackforth(ref, {
       snapFrame: false,
       wheelEvent: true,
@@ -44,7 +44,6 @@ const Offset = () => {
       </div>
       {canBackward && <button onClick={() => handleBackward()}>left</button>}
       {canForward && <button onClick={() => handleForward()}>right</button>}
-      {isHovering ? 'hover' : 'leaveHover'}
     </div>
   );
 };

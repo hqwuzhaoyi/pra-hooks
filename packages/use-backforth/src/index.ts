@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback } from 'react';
-import { useSize, useHover } from 'ahooks';
+import { useSize } from 'ahooks';
 import useTranslate from './useTranslate';
 import useChildrenWidth from './useChildrenWidth';
 import { BasicTarget, getTargetElement } from './utils/dom';
@@ -24,7 +24,6 @@ function useBackforth(
   // const debouncedTranslateX = useDebounce(translateX, { wait: 80 });
 
   const size = useSize(target);
-  const isHovering = useHover(target);
   const { run: MoveXRef } = useTranslate(target, { direction });
   const { childrenWidth, chooseChildRange } = useChildrenWidth(target, {
     snapFrame,
@@ -86,7 +85,6 @@ function useBackforth(
     handleBackward,
     canForward,
     canBackward,
-    isHovering,
   };
 }
 
