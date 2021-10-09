@@ -4,6 +4,7 @@ import { isNumeric } from './utils';
 import useBackforth from '@hqwuzhaoyi/use-backforth';
 import classnames from 'classnames';
 import { useThrottleFn } from 'ahooks';
+import Icon from './Icon';
 
 interface CarouselProps {
   dataSource: string[];
@@ -131,20 +132,19 @@ const Carousel: React.FC<CarouselProps> = ({
           </div>
         ))}
       </div>
-
-      <button
+      <div
         className={classnames(styles.carouselButton, styles.left)}
         onClick={() => run(handleLeft)}
       >
-        left
-      </button>
+        <Icon type="icon-angle-left"></Icon>
+      </div>
 
-      <button
+      <div
         className={classnames(styles.carouselButton, styles.right)}
         onClick={() => run(handleRight)}
       >
-        right
-      </button>
+        <Icon type="icon-angle-right"></Icon>
+      </div>
     </div>
   );
 };
